@@ -11,6 +11,9 @@ export class MaterialSliderFormComponent implements OnInit {
   sliderForm: FormGroup;
   cuisines: any;
 
+  //
+  newCuisine: string;
+
 
   constructor(private cuisineService: CuisineService) { }
 
@@ -31,5 +34,10 @@ export class MaterialSliderFormComponent implements OnInit {
   submitSliderForm(){
     console.log(this.sliderForm.value)
     alert(JSON.stringify(this.sliderForm.value))
+  }
+
+  addToCuisinesArray(){
+    this.sliderForm.setControl(this.newCuisine, new FormControl(0, Validators.required))
+    this.cuisineService.cuisines.push(this.newCuisine)
   }
 }
