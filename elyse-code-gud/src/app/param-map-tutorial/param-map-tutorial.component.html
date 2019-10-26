@@ -1,0 +1,11 @@
+<h2>Student Deets</h2>
+<mat-card *ngFor="let stud of students">
+    <a routerLink="/paramMap/{{stud.id}}/{{stud.name}}">{{stud.name}}</a>
+</mat-card>
+<br>
+
+<mat-card>
+    <p>Currently selected:</p>
+    <p>{{student.id}}</p>
+    <p>{{student.name}}</p>
+</mat-card>

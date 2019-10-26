@@ -1,0 +1,13 @@
+.card-body {
+    /* border: 3px, firebrick; */
+    border-width: 3px;
+    border-style: double;
+    margin: 15px, 15px;
+}
+span {
+    /* margin: 15px, 20px;
+     */
+     margin-left: 10px;
+     margin-top: 20px;
+     margin-bottom: 20px;
+}

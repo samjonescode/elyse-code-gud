@@ -1,0 +1,11 @@
+<!-- <span [hidden]="clicked" class="card card-body border" (click)="addToArray()"> -->
+        <!-- style="height:200px; width:200px;" -->
+    <!-- {{cuisine}} -->
+<!-- </span> -->
+<div [hidden]="clicked">
+<mat-card (click)="addToArray()">
+    <mat-card-content>
+        {{cuisine}}
+    </mat-card-content>
+</mat-card>
+</div>

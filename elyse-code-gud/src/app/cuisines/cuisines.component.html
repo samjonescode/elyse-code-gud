@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="container-fluid" id="preferences-form-container">
+            <div class="container-fluid" id="clickables-container">
+
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                        <h1>Like a Cuisine</h1>                    
+                            <app-clickable-cuisine [cuisine]="cuisine" *ngFor="let cuisine of cuisines"></app-clickable-cuisine>
+                        </div>
+                        <div class="col-lg-6">
+                    <h1>Liked Cuisines</h1>
+                                <app-clickable-cuisine [cuisine]="cuisine" *ngFor="let cuisine of likedCuisines"></app-clickable-cuisine>
+
+                </div>
+                    
+                    </div>
+                    </div>
+                    <br>
+        
+                    
+
+                    <button class="btn btn-primary" (click)="submitPreferences()">Done</button>
+
+

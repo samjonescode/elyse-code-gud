@@ -1,0 +1,16 @@
+app-clickable-cuisine {
+    /* width: 200px;
+    height: 200px; */
+    /* border: double; */
+}
+
+.input-invalid {
+    border-color: red;
+
+}
+mat-slider {
+    width: 500px;
+}
+button {
+    width: 200px;
+}

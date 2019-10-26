@@ -1,0 +1,10 @@
+    <input matInput type="text" [(ngModel)]="pokeName">
+
+<button mat-raised-button (click)="getPokeByName(pokeName)"> Search </button>
+
+<mat-card>
+    <p>
+        {{pokemon.name}}
+    </p>
+    <img src="{{pokemon.sprites.front_default}}" alt="">
+</mat-card>
