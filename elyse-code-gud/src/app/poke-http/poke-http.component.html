@@ -1,5 +1,5 @@
    <p>Enter a pokemon's name in lower case, e.g. blastoise, to obtain an image of that pokemon</p>
-   
+   <p>This uses ngModel for data-binding, not a form.</p>
    <input matInput type="text" [(ngModel)]="pokeName">
 
 <button mat-raised-button (click)="getPokeByName(pokeName)"> Search </button>
