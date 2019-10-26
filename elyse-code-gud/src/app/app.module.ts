@@ -16,6 +16,9 @@ import { ParamMapTutorialComponent } from './param-map-tutorial/param-map-tutori
 import { MaterialSliderFormComponent } from './material-slider-form/material-slider-form.component';
 import { PokeHttpComponent } from './poke-http/poke-http.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AltAddToDoComponent } from './alternate-todo-app/alt-add-to-do/alt-add-to-do.component';
+import { AltToDoItemComponent } from './alternate-todo-app/to-do-item/to-do-item.component';
+import { MaterialPlaygroundComponent } from './alternate-todo-app/material-playground/material-playground.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { HttpClientModule } from '@angular/common/http';
     ClickableCuisineComponent,
     ParamMapTutorialComponent,
     MaterialSliderFormComponent,
-    PokeHttpComponent
+    PokeHttpComponent,
+    AltAddToDoComponent,
+    AltToDoItemComponent,
+    MaterialPlaygroundComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatSliderModule,
     MatCardModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    //alternate todo things 
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

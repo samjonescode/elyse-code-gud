@@ -1,0 +1,16 @@
+<div [hidden]="hide">
+        <mat-card>
+          <mat-card-content>
+            {{todo.text}}
+            <br>
+            <button (click)="completeThis()" mat-raised-button style="float: left; width: 100px"> Done </button>
+            <br>
+            <div *ngIf="!todo.completedAt">
+            Submitted at: {{todo.submittedAt | date: "medium"}}
+        </div>
+            <div *ngIf=todo.completedAt>Completed at: {{todo.completedAt | date: "medium"}}</div>
+          </mat-card-content>
+        </mat-card>
+        </div>
+        
+        

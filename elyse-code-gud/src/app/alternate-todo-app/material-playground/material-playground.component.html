@@ -1,0 +1,8 @@
+<app-alt-add-to-do></app-alt-add-to-do>
+<h2>To Do:</h2>
+<div *ngIf="isEmpty">No todos</div>
+<app-to-do-item-alt [todo]="td" *ngFor="let td of todos"></app-to-do-item-alt>
+<hr>
+
+<h2>Completed : </h2>
+<app-to-do-item-alt [todo]="td" *ngFor="let td of completeTodos"></app-to-do-item-alt>
