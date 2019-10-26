@@ -2,7 +2,7 @@
 <ul>
 <li>
         Clicking the names below change the URI, which determines the person who appears under 'Currently selected:'. </li>
-        <li>Check out the Typescript file for param-map-tutorial to see that "student" is determined by the paramMap observable</li>
+        <li>In the TS file, you see that "student" is determined by the paramMap observable</li>
 </ul>
 <mat-card *ngFor="let stud of students">
     <a routerLink="/paramMap/{{stud.id}}/{{stud.name}}">{{stud.name}}</a>
