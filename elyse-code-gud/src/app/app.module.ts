@@ -19,6 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AltAddToDoComponent } from './alternate-todo-app/alt-add-to-do/alt-add-to-do.component';
 import { AltToDoItemComponent } from './alternate-todo-app/to-do-item/to-do-item.component';
 import { MaterialPlaygroundComponent } from './alternate-todo-app/material-playground/material-playground.component';
+import { SjPaginateComponent } from './sj-paginate/sj-paginate.component';
+import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
+import { NgClassExampleComponent } from './ng-class-example/ng-class-example.component';
+import { LoginFormComponent } from './login-form/login-form/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { MaterialPlaygroundComponent } from './alternate-todo-app/material-playg
     PokeHttpComponent,
     AltAddToDoComponent,
     AltToDoItemComponent,
-    MaterialPlaygroundComponent
+    MaterialPlaygroundComponent,
+    SjPaginateComponent,
+    NgSwitchExampleComponent,
+    NgClassExampleComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

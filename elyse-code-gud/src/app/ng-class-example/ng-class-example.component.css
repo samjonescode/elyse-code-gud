@@ -1,0 +1,11 @@
+.neutral {
+    background-color: blue;
+    color: yellow;
+}
+.healthy {
+    background-color: green;
+
+}
+.unhealthy {
+    background-color: red;
+}

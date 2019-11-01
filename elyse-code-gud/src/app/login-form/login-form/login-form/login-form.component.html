@@ -1,0 +1,38 @@
+<div class="col-lg-4">
+    <h1>Welcome, please login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <input formControlName="username" placeholder="username" type="text" class="form-control">
+
+            <!-- If the form control 'username' is invalid, show this div -->
+            <div *ngIf="!loginForm.controls.username.valid && loginForm.controls.username.touched" class="alert alert-danger">
+                <!-- if the reason for invalidity is 'nameIsForbidden' then show the first span below -->
+            <span *ngIf="loginForm.get('username').errors['nameIsForbidden']">Name is forbidden</span>
+            <!-- If the reason for invalidity is that 'username' is required, then show the below span instead. -->
+            <!-- this is custom form validation, not necessary for an intro to reactive forms. -->
+            <span *ngIf="loginForm.get('username').errors['required']"> Enter a valid username</span>                
+               </div>
+            <input formControlName="password" placeholder="password" type="text" class="form-control">
+            <div *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.touched" class="alert alert-danger">Enter a valid password</div>
+            <br>
+            <label for="">The input below has a custom async validator which prevents us from using t@t.com</label>
+            <input placeholder="email" type="text" formControlName="email" class="form-control">
+
+            <div  *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.touched" class="alert alert-danger">Enter a valid email</div>
+               <br>
+            <div formArrayName="hobbies" >
+                <label for="">This is a FormArray ( an array of FormControls with a related purpose )</label>
+                <h4>Hobbies</h4>
+                <button class="btn btn-success" (click)="onAddHobby()">
+                    Add Hobby
+                </button>
+
+                <div class="form-group" *ngFor="let hobbyControl of loginForm.get('hobbies').controls; let i = index;">
+                    <input type="text" placeholder="new hobby" class="form-control" [formControlName]="i">
+
+                </div>
+            </div>
+            <button [disabled]="!loginForm.valid" type="button" class="btn btn-primary" (click)="onSubmit()">Login</button>
+        </div>
+    </form>
+</div>

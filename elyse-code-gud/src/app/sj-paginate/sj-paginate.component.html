@@ -1,0 +1,13 @@
+<ul class="pagination" *ngIf="pager.pages && pager.pages.length">
+    <!-- disables use of the "first" and "previous" buttons if the current page is 1 -->
+    <li [ngClass]="{disabled: pager.currentPage ===1}" class="page-item first-item"><a (click)="setPage(1)" class="page-link">First</a></li>
+    <li [ngClass]="{disabled: pager.currentPage ===1}" class="page-item first-item"><a (click)="setPage(pager.currentPage -1)" class="page-link">Previous</a></li>
+   
+    <!-- applies the bootstrap active class if the current page is loaded -->
+    <!-- creates as many list items as there are pages in the pager. e.g. 20 list items if there are twenty pages -->
+    <li [ngClass]="{active:pager.currentPage === page}" *ngFor="let page of pager.pages" class="page-item first-item"><a (click)="setPage(page)" class="page-link">{{page}}</a></li>
+    
+    <!-- Disables the next and last buttons if the current page is the last page -->
+    <li [ngClass]="{disabled: pager.currentPage === pager.totalPages}"class="page-item first-item"><a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a></li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}"class="page-item first-item"><a (click)="setPage(pager.totalPages)" class="page-link">Last</a></li>
+</ul>

@@ -1,0 +1,16 @@
+<h3>Ng switch</h3>
+<div *ngFor="let recipe of recipes">
+        <!-- <li>{{job}}</li> -->
+        <div [ngSwitch]="recipe.cuisine">
+            <!-- The three divs with the switch case that have matching array elements will print -->
+        <div *ngSwitchCase="'vegan'">{{recipe.name}} --- vegan friendly</div>
+        <div *ngSwitchCase="'vegetarian'">{{recipe.name}} --- vegetarian friendly</div>
+        <div *ngSwitchCase="'pescetarian'">{{recipe.name}} --- pescetarian friendly</div>
+        <!-- if there is an element, and it does not match a case, the default will print -->
+        <div *ngSwitchDefault>{{recipe.name}} --- unfriendly</div> 
+    </div>
+    </div>
+    
+
+
+<app-ng-class-example></app-ng-class-example>

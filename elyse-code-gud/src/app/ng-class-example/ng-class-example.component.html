@@ -1,0 +1,17 @@
+<h3>NgSwitch and NgClass</h3>
+<h4>These are coded according to the .isHealthy property of each meal object.
+</h4>
+<p>Each meal has a .isHealthy property, that has values of false, true or null. </p>
+<ul>
+    <li>Null values are neutral -> blue.</li>
+    <li>False values are unhealthy -> red</li>
+    <li>True values are healthy -> green</li>
+</ul>
+<div *ngFor="let meal of mealsObjects">
+        <div [ngSwitch]="meal.isHealthy">
+                <p *ngSwitchCase="null" [ngClass]="'neutral'">{{meal.name}}</p>
+                <p *ngSwitchCase="false" [ngClass]="'unhealthy'">{{meal.name}}</p>
+                <p *ngSwitchCase="true" [ngClass]="'healthy'">{{meal.name}}</p>
+
+        </div>
+    </div>
